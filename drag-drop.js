@@ -191,6 +191,13 @@
 									maxX = parent.clientWidth + minX;
 									maxY = parent.clientHeight + minY;
 								}
+								else if (box === 'offsetParentInverse') {
+									var parent = binding.element.offsetParent;
+									maxX = offsetWidth;
+									minX = parent.clientWidth - offsetWidth;
+									maxY = offsetHeight;
+									minY = parent.clientHeight - offsetHeight;
+								}
 								// Bound to the dimensions of the window
 								else if (box === 'windowSize') {
 									var dimensions = getWindowSize();
